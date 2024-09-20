@@ -30,4 +30,6 @@ int main()
     std::cout<<maxSubarraySumCircular(a)<<"\n";
     std::cout<<maxSubarraySumCircular(b)<<"\n";
     std::cout<<maxSubarraySumCircular(c)<<"\n";
+    size_t x='ए';
+    std::cout<<x;
 }
