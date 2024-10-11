@@ -1,16 +1,16 @@
 {
   "configurations": [
     {
-      "name": "linux-gcc-x64",
+      "name": "linux-clang-x64",
       "includePath": [
         "${workspaceFolder}/**"
       ],
-      "compilerPath": "/usr/bin/gcc",
+      "compilerPath": "/home/hearn/clang/LLVM-17/bin/clang",
       "cStandard": "${default}",
-      "cppStandard": "${default}",
-      "intelliSenseMode": "linux-gcc-x64",
+      "cppStandard": "c++23",
+      "intelliSenseMode": "linux-clang-x64",
       "compilerArgs": [
-        ""
+        "g++ -std=c++20"
       ]
     }
   ],

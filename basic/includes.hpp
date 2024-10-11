@@ -4,7 +4,7 @@
 #include<string>
 #include<climits>
 #include<deque>
-
+#include<set>
 std::ostream& operator<<(std::ostream &stream, std::vector<int> &vec)
 {
     for(size_t i=0;i<vec.size();i++)
