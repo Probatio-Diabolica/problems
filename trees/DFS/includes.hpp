@@ -45,3 +45,12 @@ std::ostream &operator<<(std::ostream & stream, TreeNode* node)
     return stream;
 }
 
+std::ostream &operator<<(std::ostream &stream,std::vector<int>&vec)
+{
+    for(int i=0;i<vec.size();i++)
+    {
+        stream <<vec[i]<<" , ";
+    }
+    return stream;
+}
+

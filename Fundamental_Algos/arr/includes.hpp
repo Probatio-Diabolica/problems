@@ -5,8 +5,11 @@
 #include<climits>
 #include<deque>
 #include<map>
-std::ostream& operator<<(std::ostream& stream , std::vector<int> vec)
+#include<queue>
+using namespace std;
+template<typename Type>
+std::ostream& operator<<(std::ostream& stream , std::vector<Type> vec)
 {
-    for(int i : vec) stream <<i<<" , ";
+    for(auto i : vec) stream <<i<<" , ";
     return stream;
 }
