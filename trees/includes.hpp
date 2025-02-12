@@ -2,20 +2,23 @@
 !! notes :: There are two types of traversals :
 $ BFS
 $ DFS
-
-
+@Probatio-Diabolica
+@Hearn
 
 */
 
-# pragma once
+// # pragma once
+#ifndef INCLUDES_HPP
+#define INCLUDES_HPP
 #include<string>
 #include<iostream>
 #include<vector>
 #include<queue>
 #include<stack>
-#include<unordered_map>
 
 
+using namespace std;
+using iArray = std::vector<int>;
 
 struct TreeNode {
     int val;
@@ -101,3 +104,5 @@ std::ostream &operator<<(std::ostream & stream, TreeNode* node)
     return stream;
 }
 
+
+#endif
