@@ -1,15 +1,22 @@
 #include<iostream>
 #include<vector>
-#include<unordered_map>
 #include<string>
-#include<climits>
-#include<deque>
-#include<map>
-#include<queue>
+#include<cstdint>
+#include<unordered_map>
 using namespace std;
-template<typename Type>
-std::ostream& operator<<(std::ostream& stream , std::vector<Type> vec)
+
+
+using bArray = std::vector<bool>;
+typedef vector<int> iArray;
+using iMap = std::unordered_map<int,int>;
+
+template<typename type>
+std::ostream& operator<<(std::ostream& stream,const std::vector<type>& vec)
 {
-    for(auto i : vec) stream <<i<<" , ";
+    for(int i=0;i<vec.size();i++)
+    {
+        stream<<" "<<vec[i];
+    }
+    std::cout<<'\n';
     return stream;
 }
