@@ -2,7 +2,6 @@
 
 
 int orangesRotting(vector<vector<int>>& grid) {
-    int vertices=grid.size();
     int fresh=0;
     int minutes=0;
     std::queue<std::pair<int,int>> bfs;
@@ -18,26 +17,54 @@ int orangesRotting(vector<vector<int>>& grid) {
     while(!bfs.empty())
     {
         int run = bfs.size();
+        int del = 0;
         while(run>0)
         {
+            
             int row = bfs.front().first;
             int col = bfs.front().second;
             
             bfs.pop();
 
-            
-
+            if(row+1 < grid.size() and grid[row+1][col] == 1)
+            {
+                --fresh;
+                grid[row+1][col] = 2;
+                bfs.push({row+1,col});
+                ++del;
+            }
+            if(row-1 >= 0  and grid[row-1][col] == 1)
+            {
+                --fresh;
+                grid[row-1][col] = 2;
+                bfs.push({row-1,col});
+                ++del;
+            }
+            if(col+1 < grid.size() and grid[row][col+1] == 1)
+            {
+                --fresh;
+                grid[row][col+1] = 2;
+                bfs.push({row,col+1});
+                ++del;
+            }
+            if(col-1 >= 0 and grid[row][col-1] == 1)
+            {
+                --fresh;
+                grid[row][col-1] = 2;
+                bfs.push({row,col-1});
+                ++del;
+            }
             --run;
         }
-        ++minutes;
+        if(del>0)++minutes;
     }
 
-    return minutes;
+    return (fresh == 0 ) ?  minutes : -1;
 }
 
 
 int main()
 {
-    iMat graph={{}};
-
+    iMat graph={{1},{2}};
+    std::cout<<orangesRotting(graph);
 }
