@@ -4,7 +4,7 @@
 #include<vector>
 #include<unordered_map>
 #include<queue>
-
+#include <algorithm>
 
 using namespace std;
 using minHeap = std::priority_queue<int,std::vector<int>,std::greater<int>>;
