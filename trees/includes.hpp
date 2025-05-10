@@ -45,8 +45,8 @@ TreeNode *sortedArrayToBST(std::vector<int> &nums)
     return makeTree(0,nums.size()-1,nums); 
 }
 
-
-std::ostream &operator<<(std::ostream & stream, const std::vector<int> &vec)
+template<typename T>
+std::ostream &operator<<(std::ostream & stream, const std::vector<T> &vec)
 {
     for(int i=0;i<vec.size();i++)
     {

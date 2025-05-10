@@ -3,7 +3,6 @@
 
 #include <climits>
 
-#include <cstddef>
 #include <functional>
 
 #include <algorithm>
@@ -54,7 +53,7 @@ ostream& operator <<(ostream& stream,std::pair<type,type>& pair)
 template<typename type>
 ostream& operator <<(ostream& stream,vector<type> &vec)
 {
-    for(size_t i=0;i<vec.size();i++)
+    for(int i=0;i<vec.size();i++)
     {
         stream<<" "<<vec[i];
     }
@@ -65,7 +64,7 @@ ostream& operator <<(ostream& stream,vector<type> &vec)
 template<typename type>
 ostream& operator <<(ostream& stream,const vector<type> &vec)
 {
-    for(size_t i=0;i<vec.size();i++)
+    for(int i=0;i<vec.size();i++)
     {
         stream<<" "<<vec[i];
     }
